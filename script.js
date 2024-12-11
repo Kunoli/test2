@@ -1,15 +1,10 @@
-// Ajout d'astuces dynamiques
-const tips = [
-    "Astuce : Utilisez !help pour obtenir des informations sur les commandes.",
-    "Astuce : Respectez les règles pour une meilleure expérience.",
-    "Astuce : Contactez un administrateur si vous avez un problème."
-];
+// This script could be used to control when to remove the loading screen,
+// for example, once your game resources are loaded.
+// For now, we'll keep the loading screen visible indefinitely.
 
-const tipsElement = document.getElementById("tips");
-
-// Change l'astuce toutes les 5 secondes
-let index = 0;
-setInterval(() => {
-    index = (index + 1) % tips.length;
-    tipsElement.textContent = tips[index];
-}, 5000);
+document.addEventListener("DOMContentLoaded", function() {
+    // Optional: You can hide the loading screen after a certain time, or once the game assets are loaded
+    // setTimeout(function() {
+    //     document.querySelector(".loading-container").style.display = 'none';
+    // }, 5000); // Hide after 5 seconds for example
+});
