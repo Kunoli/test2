@@ -4,42 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chargement - Garry's Mod</title>
-    <style>
-        /* Styles généraux pour garantir que la vidéo couvre toute la fenêtre */
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            position: relative;
-        }
-
-        /* Vidéo en arrière-plan */
-        #background-video {
-            position: absolute;  /* La vidéo doit être positionnée derrière */
-            top: 0;
-            left: 0;
-            width: 100%;  /* La vidéo doit occuper toute la largeur */
-            height: 100%;  /* La vidéo doit occuper toute la hauteur */
-            object-fit: cover;  /* Assure que la vidéo couvre tout l'écran sans déformation */
-            z-index: -1;  /* La vidéo doit être derrière le contenu */
-        }
-
-        /* Contenu (texte) qui doit être visible par-dessus la vidéo */
-        .content {
-            position: relative;
-            z-index: 1;  /* Le texte doit être au-dessus de la vidéo */
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 20vh;  /* Un peu d'espace en haut pour centrer le texte */
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Lien vers le fichier CSS -->
 </head>
 <body>
     <!-- Vidéo d'arrière-plan -->
     <video autoplay muted loop id="background-video">
-        <!-- Assurez-vous de mettre le lien correct vers votre vidéo -->
         <source src="https://www.dropbox.com/s/abc123/video.mp4?raw=1" type="video/mp4">
         Votre navigateur ne supporte pas la lecture vidéo.
     </video>
@@ -49,5 +18,8 @@
         <h1>Bienvenue sur Garry's Mod</h1>
         <p>Chargement en cours...</p>
     </div>
+
+    <!-- Lien vers le fichier JS -->
+    <script src="scripts.js"></script>
 </body>
 </html>
