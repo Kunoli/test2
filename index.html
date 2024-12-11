@@ -3,30 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Écran de Chargement</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Écran de Chargement Garry's Mod</title>
+    <style>
+        /* Styles pour le body pour occuper toute la fenêtre */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        /* Styles pour la vidéo d'arrière-plan */
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Assure que la vidéo couvre l'ensemble de l'écran */
+            z-index: -1; /* Assure que la vidéo est en arrière-plan */
+        }
+
+        /* Contenu au premier plan */
+        .loading-content {
+            position: relative;
+            z-index: 1; /* Le contenu est au-dessus de la vidéo */
+            text-align: center;
+            padding-top: 30%;
+        }
+
+        .loading-content h1 {
+            font-size: 3em;
+        }
+
+        .loader {
+            margin: 20px auto;
+            border: 4px solid transparent;
+            border-top: 4px solid white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Animation de la rotation du loader */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
+
     <!-- Vidéo d'arrière-plan -->
-    <video autoplay muted loop id="background-video">
-        <source src="https://www.dropbox.com/scl/fi/8dk2pzaikvjy4wrg1kpwl/background.mp4?rlkey=twckue86mdixewl33cnhmnprc&st=bthtquj7&raw=1" type="video/mp4">
+    <video id="background-video" autoplay muted loop>
+        <source src="https://www.dropbox.com/s/abc123/video.mp4?raw=1" type="video/mp4">
         Votre navigateur ne supporte pas la lecture vidéo.
     </video>
 
-    <!-- Contenu de chargement -->
-    <div class="loading-container">
-        <h1>Bienvenue sur notre serveur Garry's Mod</h1>
-        <p>Chargement en cours...</p>
+    <!-- Contenu d'écran de chargement -->
+    <div class="loading-content">
+        <h1>Chargement en cours...</h1>
         <div class="loader"></div>
-        <p id="tips">Astuce : Respectez les autres joueurs pour une meilleure expérience !</p>
+        <p>Astuce : Respectez les autres joueurs pour une meilleure expérience !</p>
     </div>
 
-    <!-- Musique de fond -->
-    <audio autoplay loop id="background-music">
-        <source src="background.mp3" type="audio/mp3">
-        Votre navigateur ne supporte pas la lecture audio.
-    </audio>
-
-    <script src="script.js"></script>
 </body>
 </html>
