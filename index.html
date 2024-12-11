@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chargement - Garry's Mod</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Lien vers le fichier CSS -->
+    <title>Écran de Chargement</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Vidéo d'arrière-plan -->
     <video autoplay muted loop id="background-video">
-        <source src="https://www.dropbox.com/s/abc123/video.mp4?raw=1" type="video/mp4">
+        <source src="https://www.dropbox.com/scl/fi/8dk2pzaikvjy4wrg1kpwl/background.mp4?rlkey=twckue86mdixewl33cnhmnprc&st=bthtquj7&raw=1" type="video/mp4">
         Votre navigateur ne supporte pas la lecture vidéo.
     </video>
 
-    <!-- Contenu affiché par-dessus la vidéo -->
-    <div class="content">
-        <h1>Bienvenue sur Garry's Mod</h1>
+    <!-- Contenu de chargement -->
+    <div class="loading-container">
+        <h1>Bienvenue sur notre serveur Garry's Mod</h1>
         <p>Chargement en cours...</p>
+        <div class="loader"></div>
+        <p id="tips">Astuce : Respectez les autres joueurs pour une meilleure expérience !</p>
     </div>
 
-    <!-- Lien vers le fichier JS -->
-    <script src="scripts.js"></script>
+    <!-- Musique de fond -->
+    <audio autoplay loop id="background-music">
+        <source src="background.mp3" type="audio/mp3">
+        Votre navigateur ne supporte pas la lecture audio.
+    </audio>
+
+    <script src="script.js"></script>
 </body>
 </html>
